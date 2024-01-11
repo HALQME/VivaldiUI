@@ -1,0 +1,2 @@
+#!/bin/sh
+open -a "${0%/*.app/*}"/Vivaldi.app --args --user-data-dir="${0%/*.app/*}/User Data"
