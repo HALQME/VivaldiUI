@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/*タブスタック時のごちゃごちゃを消す*/
+#webview-container:has(#webpage-stack .mosaic.visible) {
+  padding: 0px;
+  box-shadow: 0 0 0 0px var(--colorBgDarker),
+    inset 0 0 0 4px var(--colorBgDarker);
+  border-radius: 0px;
+}
+
+/* スクロールバーの駆逐。タブが増えると勝手にタブバーの幅が変わるので無くす */
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-resize {
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+div#browser {
+  --scrollbarWidth: 0px !important;
+}
+/*タブバーの幅固定*/
+div#tabs-tabbar-container {
+  width: 60px !important;
+}
+span.tabbar-wrapper {
+  width: 60px !important;
+}
+.button-toolbar.tabbar-workspace-button.workspace-popup.clgn0cbrl007q3b615sblze2s.button-menu {
+  width: 60px !important;
+}
+.button-toolbar.newtab {
+  left: 0px !important;
+}
+div#tabs-subcontainer {
+  flex-basis: 30px !important;
+}
+/*ワークスペースのアイコンの操作*/
+#browser .workspace-popup .button-icon:not(.override),
+#browser .tabbar-workspace-button .button-icon:not(.override) {
+  margin-right: -2px;
+  margin-left: 4px;
+}
+.toolbar {
+  padding-left: 0px;
+}
+/*タブバーの謎の線を消す*/
+div#tabs-tabbar-container {
+  --colorBorder: none;
+}
+/*2段タブのロックボタンを削除*/
+.button-toolbar.tabs-locked {
+  display: none;
+}
+#browser.color-behind-tabs-on .tab-position .tab.active.active {
+  background-color: var(--colorBgAlphaHeavier);
+  color: var(--colorFg);
+}
+/*半透明を強制*/
+.color-behind-tabs-off #tabs-subcontainer,
+.transparent-tabbar #tabs-subcontainer {
+  background-color: var(--colorAccentBgAlphaHeavy);
+}
+.color-behind-tabs-on #tabs-subcontainer {
+  background-color: var(--colorBgAlphaHeavier);
+}
+.transparent-tabbar.tabs-left .tabbar-wrapper,
+.transparent-tabbar.tabs-right .tabbar-wrapper {
+  backdrop-filter: none;
+}
+#tabs-subcontainer.left,
+#tabs-subcontainer.right {
+  box-shadow: 0px 0 var(--colorAccentBgDarker) inset,
+    0px 0 var(--colorAccentBgDarker) inset;
+}
+.SlideBar--FullHeight.alternate {
+  display: none;
+}
+.color-behind-tabs-on {
+  background-image: none;
+  background-color: transparent;
+}
+.color-behind-tabs-off {
+  background-color: transparent;
+}
+.tabs-left .tabbar-wrapper,
+.tabs-right .tabbar-wrapper {
+  --colorTabBar: var(--colorAccentBgAlphaHeavy);
+}
+#browser:not(
+    .is-settingspage
+  ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-top
+  #header:before,
+#browser:not(
+    .is-settingspage
+  ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-left
+  .tabbar-wrapper:before,
+#browser:not(
+    .is-settingspage
+  ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-right
+  .tabbar-wrapper:before,
+#browser:not(
+    .is-settingspage
+  ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-bottom
+  > footer:before {
+  backdrop-filter: var(--backgroundBlur + 5);
+  background-color: var(--colorAccentBgAlphaHeavy);
+}
+/*フォーカスされていないときにの動作*/
+.color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
+  header,
+.color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
+  footer,
+.color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
+  .panel-group,
+.color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
+  .bookmark-bar,
+.color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
+  .manager-editor,
+.color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
+  .vivaldi-settings,
+.color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
+  .toolbar,
+.color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
+  .mainbar,
+.color-behind-tabs-on:not(
+    .transparent-tabbar
+  )#browser.isblurred.dim-blurred:not(.is-settingspage)
+  #header,
+.color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
+  #switch,
+.color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
+  .tabbar-wrapper {
+  --colorTabBar: var(--colorHighlightFgAlpha);
+}

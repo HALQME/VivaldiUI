@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/*ホバー・アクティブ時の挙動を統一*/
+button:hover {
+  background-color: var(--colorBgAlphaHeavier) !important;
+  color: var(--colorHighlightBgFaded) !important;
+}
+
+/*その他テキストスタイル*/
+.button-textonly {
+  color: var(--colorFg);
+}
