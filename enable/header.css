@@ -4,14 +4,18 @@ div#header {
 }
 
 /*信号UI位置調整*/
-.mac #titlebar.tabless .window-buttongroup {
+#browser.mac #titlebar.tabless .window-buttongroup {
   z-index: 10;
 }
 /*信号UIを隠す*/
-#browser.minimal-ui .window-buttongroup {
+#browser.minimal-ui.disable-titlebar .vivaldi,
+#browser.minimal-ui.disable-titlebar .window-buttongroup {
+  display: flex;
+  padding-top: 24px;
   opacity: 0;
 }
-#browser.minimal-ui .window-buttongroup:hover {
+#browser.minimal-ui.disable-titlebar .vivaldi,
+#browser.minimal-ui.disable-titlebar .window-buttongroup:hover {
   opacity: 1;
 }
 
