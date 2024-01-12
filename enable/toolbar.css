@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/*ツールバーとinnerの間の線を消す*/
+.color-behind-tabs-off.address-top
+  .mainbar
+  > .toolbar-mainbar
+  .toolbar-extensions:before,
+.color-behind-tabs-off.address-top .mainbar > .toolbar-mainbar:before {
+  background-color: transparent;
+}
+/*ツールバー*/
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large {
+  background-color: transparent;
+  backdrop-filter: var(--backgroundBlur);
+}
+/*なぜか反応しない拡張機能ボタン*/
+.toolbar-mainbar .toolbar-extensions,
+.toolbar-mainbar {
+  background: transparent;
+}
+/*ツールバーでの挙動*/
+.color-behind-tabs-off
+  .toolbar-mainbar
+  > .button-toolbar
+  > button.button-pressed,
+.color-behind-tabs-on
+  .toolbar-mainbar
+  .toolbar-extensions
+  > .button-toolbar
+  > button.button-pressed,
+.color-behind-tabs-on
+  .toolbar-mainbar
+  .page-zoom-controls
+  > .button-toolbar
+  > button.button-pressed,
+.color-behind-tabs-on
+  .toolbar-mainbar
+  > .button-toolbar
+  > button.button-pressed {
+  background-color: var(--colorcolorBgAlphaHeavier);
+  color: var(--colorHighlightBgFaded);
+  background-image: none !important;
+}
+/*ウィンドウにアクセントカラーを適応する場合*/
+/*ツールバーとinnerの間の線を消す*/
+.address-top .mainbar > .toolbar-mainbar .toolbar-extensions:before,
+.address-top .mainbar > .toolbar-mainbar:before {
+  background-color: transparent;
+}
+.address-top .mainbar > .toolbar-mainbar {
+  border-bottom: none;
+}
+
+/*拡張機能ボタンの色*/
+.toolbar-mainbar .toolbar-extensions,
+.toolbar-mainbar {
+  background-color: transparent;
+}
