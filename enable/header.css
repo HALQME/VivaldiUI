@@ -1,0 +1,22 @@
+@charset "utf-8";
+div#header {
+  min-height: 0px !important;
+}
+
+/*信号UI位置調整*/
+.mac #titlebar.tabless .window-buttongroup {
+  z-index: 10;
+}
+/*信号UIを隠す*/
+#browser.minimal-ui .window-buttongroup {
+  opacity: 0;
+}
+#browser.minimal-ui .window-buttongroup:hover {
+  opacity: 1;
+}
+
+/*タイトルを削除*/
+.mac #titlebar #pagetitle,
+#titlebar #pagetitle .linux.alt {
+  display: none;
+}

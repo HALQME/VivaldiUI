@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/*メインバー*/
+.color-behind-tabs-off .mainbar {
+  background-color: transparent;
+}
+
+.mainbar {
+  background-color: transparent;
+}
+
+/*高さ調整*/
+#browser.mac.address-top .toolbar:has(.window-buttongroup.on-mainbar) {
+  min-height: calc(24px / var(--uiZoomLevel));
+}
+/* search fieldの高さを抑制*/
+.UrlBar-SearchField,
+.UrlBar-AddressField {
+  max-height: calc(22px / var(--uiZoomLevel));
+}
+/* タイトルバーを表示する場合 */
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large {
+  padding-left: 72px;
+}
