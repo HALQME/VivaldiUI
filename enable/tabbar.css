@@ -58,9 +58,14 @@ div#tabs-subcontainer {
 .toolbar {
   padding-left: 0px;
 }
-/*タブバーの謎の線を消す*/
-div#tabs-tabbar-container {
-  --colorBorder: none;
+/* ワークスペースの幅を固定 */
+.tabs-left .button-toolbar.workspace-popup.tabbar-workspace-button,
+.tabs-right .button-toolbar.workspace-popup.tabbar-workspace-button {
+  max-width: 60px;
+}
+/*タブバーの線を消す*/
+#tabs-tabbar-container {
+  box-shadow: none;
 }
 /*2段タブのロックボタンを削除*/
 .button-toolbar.tabs-locked {
@@ -70,6 +75,7 @@ div#tabs-tabbar-container {
   background-color: var(--colorBgAlphaHeavier);
   color: var(--colorFg);
 }
+
 /*半透明を強制*/
 .color-behind-tabs-off #tabs-subcontainer,
 .transparent-tabbar #tabs-subcontainer {
