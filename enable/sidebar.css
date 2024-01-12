@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+/*パネルバーアクティブ時の変化*/
+#switch
+  .addwebpanel-wrapper
+  > button:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):hover,
+#switch
+  > .button-toolbar:not(
+    .toolbar-spacer,
+    .toolbar-spacer-flexible,
+    .divider
+  ):hover,
+#switch
+  > *
+  > .button-toolbar:not(
+    .toolbar-spacer,
+    .toolbar-spacer-flexible,
+    .divider
+  ):hover,
+#switch > button:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):hover,
+#switch
+  .addwebpanel-wrapper
+  > button:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):active,
+#switch
+  > .button-toolbar:not(
+    .toolbar-spacer,
+    .toolbar-spacer-flexible,
+    .divider
+  ):active,
+#switch
+  > *
+  > .button-toolbar:not(
+    .toolbar-spacer,
+    .toolbar-spacer-flexible,
+    .divider
+  ):active,
+#switch
+  > button:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):active
+  #switch
+  > button:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):active {
+  background-color: var(--colorBgAlphaHeavier);
+  color: var(--colorHighlightBgFaded);
+  background-image: none !important;
+}
+
+/*パネルバー透明化*/
+div#panels-container {
+  backdrop-filter: var(--backgroundBlur);
+  background-color: transparent;
+}
