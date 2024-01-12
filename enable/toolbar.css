@@ -18,6 +18,12 @@
 .toolbar-mainbar {
   background: transparent;
 }
+/* ウィンドウにアクセントカラーを適用しない場合 */
+.color-behind-tabs-off .toolbar-mainbar .toolbar-extensions,
+.color-behind-tabs-off .toolbar-mainbar .page-zoom-controls,
+.color-behind-tabs-off .toolbar-mainbar {
+  background: transparent;
+}
 /*ツールバーでの挙動*/
 .color-behind-tabs-off
   .toolbar-mainbar

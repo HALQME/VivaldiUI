@@ -22,3 +22,7 @@
 .toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large {
   padding-left: 72px;
 }
+/* paddingを上書き*/
+#browser.mac.address-top .toolbar:has(.window-buttongroup.on-mainbar) {
+  padding: 0;
+}
