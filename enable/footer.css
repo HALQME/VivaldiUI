@@ -8,7 +8,7 @@
 }
 
 #browser > footer > .toolbar-statusbar {
-  height: 30px;
+  height: 32px;
   backdrop-filter: var(--backgroundBlur);
   background-color: transparent;
 }
@@ -33,3 +33,7 @@
 .dim-blurred:not(.hasfocus) .UrlBar-AddressField {
   border: none;
 }
+#browser:not(.tabs-bottom) footer#footer {
+  background: var(--colorImageBgAlpha);
+}
+
