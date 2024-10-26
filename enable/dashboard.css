@@ -1,0 +1,55 @@
+/* ダッシュボード本体系 */
+.Dashboard-Widgets .dashboard-widget,
+.Dashboard-Widgets .solid-background,
+.widget-config {
+    background-color: var(--colorBgAlphaHeavier);
+}
+
+.Dashboard-Webpage .url-wrapper {
+    display: none;
+}
+
+.calendar-grid-agenda .calendar-add-event-button,
+.calendar-grid-agenda:focus-visible
+    .calendar-add-event-button:not(.is-dragging).active,
+.calendar-grid-agenda:focus-within
+    .calendar-add-event-button:not(.is-dragging).active,
+.calendar-grid:focus-visible
+    .calendar-add-event-button:not(.is-dragging).active,
+.calendar-grid:focus-within .calendar-add-event-button:not(.is-dragging).active,
+.Dashboard > button.add-button,
+.FormButton .widget-config-footer > input[type="button"]:not(.circular),
+input[type="color"],
+input[type="submit"] {
+    background-image: linear-gradient(
+        var(--colorBgAlphaHeavy),
+        var(--colorBgAlphaHeavier)
+    );
+}
+.calendar-add-event-button.selected.active::before {
+    display: none;
+}
+.Dashboard-TasksWidget
+    .widget-image-intro
+    ~ .calendar-viewport
+    .calendar-add-event-button,
+.Dashboard-CalendarWidget
+    .widget-image-intro
+    ~ .calendar-viewport
+    .calendar-add-event-button {
+    max-width: fit-content;
+    padding: 6px;
+}
+
+/* 新しいウィジェット */
+.Dashboard > .add-button {
+    background-color: transparent;
+}
+.dashboard-list-wrapper {
+    background-color: transparent;
+    backdrop-filter: blur(var(--backgroundBlur));
+}
+
+.dashboard-list-wrapper .button-wrapper .add-button {
+    background-color: var(--colorBgAlphaHeavier);
+}

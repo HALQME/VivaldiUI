@@ -2,154 +2,168 @@
 
 /*タブスタック時のごちゃごちゃを消す*/
 #webview-container:has(#webpage-stack .mosaic.visible) {
-  padding: 0px;
-  box-shadow: 0 0 0 0px var(--colorBgDarker),
-    inset 0 0 0 4px var(--colorBgDarker);
-  border-radius: 0px;
+    padding: 0px;
+    box-shadow:
+        0 0 0 0px var(--colorBgDarker),
+        inset 0 0 0 4px var(--colorBgDarker);
+    border-radius: 0px;
 }
 
 /* スクロールバーの駆逐。タブが増えると勝手にタブバーの幅が変わるので無くす */
 ::-webkit-scrollbar-button {
-  display: none;
+    display: none;
 }
 ::-webkit-scrollbar-corner,
 ::-webkit-scrollbar-resize {
-  display: none;
+    display: none;
 }
 ::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+    width: 0px;
+    height: 0px;
 }
 ::-webkit-scrollbar-thumb {
-  display: none;
+    display: none;
 }
 
 ::-webkit-scrollbar-track {
-  display: none;
+    display: none;
 }
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 div#browser {
-  --scrollbarWidth: 0px !important;
+    --scrollbarWidth: 0px !important;
 }
 /*タブバーの幅固定*/
 div#tabs-tabbar-container {
-  width: 60px !important;
+    width: 60px !important;
 }
 span.tabbar-wrapper {
-  width: 60px !important;
+    width: 60px !important;
 }
 .button-toolbar.tabbar-workspace-button.workspace-popup.clgn0cbrl007q3b615sblze2s.button-menu {
-  width: 60px !important;
+    width: 60px !important;
 }
 .button-toolbar.newtab {
-  left: 0px !important;
+    left: 0px !important;
 }
 div#tabs-subcontainer {
-  flex-basis: 30px !important;
+    width: 30px;
+    flex: 0 0 30px !important;
+}
+#tabs-subcontainer.left .overflow.tab-strip,
+#tabs-subcontainer.right .overflow.tab-strip {
+    min-width: 30px;
 }
 /*ワークスペースのアイコンの操作*/
 #browser .workspace-popup .button-icon:not(.override),
 #browser .tabbar-workspace-button .button-icon:not(.override) {
-  margin-right: -2px;
-  margin-left: 4px;
+    margin-right: -2px;
+    margin-left: 4px;
 }
 .toolbar {
-  padding-left: 0px;
+    padding-left: 0px;
+}
+.tabbar-workspace-button + #tabs-tabbar-container.left,
+.tabbar-workspace-button + #tabs-tabbar-container.right {
+    padding-top: 12px;
+}
+.separator.separator-wsbutton {
+    top: 4px;
 }
 /* ワークスペースの幅を固定 */
 .tabs-left .button-toolbar.workspace-popup.tabbar-workspace-button,
 .tabs-right .button-toolbar.workspace-popup.tabbar-workspace-button {
-  max-width: 60px;
+    max-width: 60px;
 }
 /*タブバーの線を消す*/
 #tabs-tabbar-container {
-  box-shadow: none;
+    box-shadow: none;
 }
 /*2段タブのロックボタンを削除*/
-.button-toolbar.tabs-locked {
-  display: none;
-}
+/*.button-toolbar.tabs-locked {*/
+/*  display: none;*/
+/*}*/
 #browser.color-behind-tabs-on .tab-position .tab.active.active {
-  background-color: var(--colorBgAlphaHeavier);
-  color: var(--colorFg);
+    background-color: var(--colorBgAlphaHeavier);
+    color: var(--colorFg);
 }
 
 /*半透明を強制*/
 .color-behind-tabs-off #tabs-subcontainer,
 .transparent-tabbar #tabs-subcontainer {
-  background-color: var(--colorAccentBgAlphaHeavy);
+    background-color: transparent;
 }
 .color-behind-tabs-on #tabs-subcontainer {
-  background-color: var(--colorBgAlphaHeavier);
+    background-color: transparent;
 }
 .transparent-tabbar.tabs-left .tabbar-wrapper,
 .transparent-tabbar.tabs-right .tabbar-wrapper {
-  backdrop-filter: none;
+    backdrop-filter: none;
 }
 #tabs-subcontainer.left,
 #tabs-subcontainer.right {
-  box-shadow: 0px 0 var(--colorAccentBgDarker) inset,
-    0px 0 var(--colorAccentBgDarker) inset;
+    box-shadow:
+        0px 0 var(--colorAccentBgDarker) inset,
+        0px 0 var(--colorAccentBgDarker) inset;
 }
 .SlideBar--FullHeight.alternate {
-  display: none;
+    display: none;
 }
 .color-behind-tabs-on {
-  background-image: none;
-  background-color: transparent;
+    background-image: none;
+    background-color: transparent;
 }
 .color-behind-tabs-off {
-  background-color: transparent;
+    background-color: transparent;
 }
 .tabs-left .tabbar-wrapper,
 .tabs-right .tabbar-wrapper {
-  --colorTabBar: var(--colorAccentBgAlphaHeavy);
+    --colorTabBar: var(--colorAccentBgAlphaHeavy);
 }
 #browser:not(
-    .is-settingspage
-  ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-top
-  #header:before,
+        .is-settingspage
+    ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-top
+    #header:before,
 #browser:not(
-    .is-settingspage
-  ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-left
-  .tabbar-wrapper:before,
+        .is-settingspage
+    ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-left
+    .tabbar-wrapper:before,
 #browser:not(
-    .is-settingspage
-  ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-right
-  .tabbar-wrapper:before,
+        .is-settingspage
+    ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-right
+    .tabbar-wrapper:before,
 #browser:not(
-    .is-settingspage
-  ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-bottom
-  > footer:before {
-  backdrop-filter: var(--backgroundBlur + 5);
-  background-color: var(--colorAccentBgAlphaHeavy);
+        .is-settingspage
+    ).color-accent-from-page.color-behind-tabs-on.transparent-tabbar.tabs-bottom
+    > footer:before {
+    backdrop-filter: var(--backgroundBlur + 5);
+    background-color: var(--colorAccentBgAlphaHeavy);
 }
 /*フォーカスされていないときにの動作*/
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
-  header,
+    header,
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
-  footer,
+    footer,
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
-  .panel-group,
+    .panel-group,
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
-  .bookmark-bar,
+    .bookmark-bar,
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
-  .manager-editor,
+    .manager-editor,
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
-  .vivaldi-settings,
+    .vivaldi-settings,
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
-  .toolbar,
+    .toolbar,
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
-  .mainbar,
+    .mainbar,
 .color-behind-tabs-on:not(
-    .transparent-tabbar
-  )#browser.isblurred.dim-blurred:not(.is-settingspage)
-  #header,
+        .transparent-tabbar
+    )#browser.isblurred.dim-blurred:not(.is-settingspage)
+    #header,
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
-  #switch,
+    #switch,
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
-  .tabbar-wrapper {
-  --colorTabBar: var(--colorHighlightFgAlpha);
+    .tabbar-wrapper {
+    --colorTabBar: var(--colorHighlightFgAlpha);
 }

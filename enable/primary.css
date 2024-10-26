@@ -1,12 +1,35 @@
 @charset "utf-8";
 
 /*ホバー・アクティブ時の挙動を統一*/
-button:hover {
-  background-color: var(--colorBgAlphaHeavier) !important;
-  color: var(--colorHighlightBgFaded) !important;
+.button-toolbar > button:hover,
+.button-toolbar > button:active,
+.calendar-grid-agenda .calendar-add-event-button:hover,
+.calendar-grid-agenda:hover
+    .calendar-add-event-button:hover
+    button:hover
+    .FormButton.primary:active,
+.Dashboard > .add-button:hover,
+.FormButton.primary:hover,
+.FormButton[type="submit"]:active,
+.FormButton[type="submit"]:hover,
+input[type="button"]:not(.circular).primary:active,
+input[type="button"]:not(.circular).primary:hover,
+input[type="button"]:not(.circular)[type="submit"]:active,
+input[type="button"]:not(.circular)[type="submit"]:hover,
+input[type="color"].primary:active,
+input[type="color"].primary:hover,
+input[type="color"][type="submit"]:active,
+input[type="color"][type="submit"]:hover,
+input[type="submit"].primary:active,
+input[type="submit"].primary:hover,
+input[type="submit"][type="submit"]:active,
+input[type="submit"][type="submit"]:hover,
+span.editable-title-container:hover {
+    background-color: var(--colorBgAlphaHeavier) !important;
+    color: var(--colorAccentBgDarker) !important;
 }
 
 /*その他テキストスタイル*/
 .button-textonly {
-  color: var(--colorFg);
+    color: var(--colorFg);
 }
