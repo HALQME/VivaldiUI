@@ -3,37 +3,38 @@
 /*検索欄*/
 .UrlBar-AddressField.button-textonly.below .SearchField,
 .UrlBar-AddressField {
-  background-color: var(--colorImageRightFgAlphaHeavy);
-  backdrop-filter: blur(8px) !important;
+    background-color: var(--colorImageRightFgAlphaHeavy);
+    backdrop-filter: blur(8px) !important;
 }
 
 #browser > footer > .toolbar-statusbar {
-  height: 32px;
-  backdrop-filter: var(--backgroundBlur);
-  background-color: transparent;
+    height: 32px;
+    backdrop-filter: var(--backgroundBlur);
+    background-color: transparent;
 }
 :not(.tabs-bottom)#browser > footer {
-  background: transparent;
-  color: var(--colorFg);
-  box-shadow: inset 0 0px 0 0 var(--colorBorder);
+    background: transparent;
+    color: var(--colorFg);
+    box-shadow: inset 0 0px 0 0 var(--colorBorder);
 }
 
 /*フッタースタイル*/
 /*謎の線を消す*/
 :not(.tabs-bottom)#browser > footer:after {
-  background-color: transparent;
+    background-color: transparent;
 }
 /*検索窓*/
 .button-textonly.UrlBar-SearchField.iconmenu-container.SearchField.above {
-  background-color: var(--colorImageRightFgAlphaHeavy);
-  backdrop-filter: blur(calc(2 + var(--backgroundBlur)));
-  /*  color: var(--colorBorder);*/
+    background-color: var(--colorImageRightFgAlphaHeavy);
+    backdrop-filter: blur(calc(2 + var(--backgroundBlur)));
+    /*  color: var(--colorBorder);*/
 }
 .dim-blurred:not(.hasfocus) .SearchField,
 .dim-blurred:not(.hasfocus) .UrlBar-AddressField {
-  border: none;
+    border: none;
 }
 #browser:not(.tabs-bottom) footer#footer {
-  background: var(--colorImageBgAlpha);
+    background: var(--colorImageBgAlphaHeavier);
+    color: var(--colorFg);
+    border-top: 0px solid var(--colorBorder);
 }
-

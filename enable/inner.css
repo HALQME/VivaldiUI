@@ -1,76 +1,69 @@
 @charset "utf-8";
-
-
-
-
 /*スタートページの設定*/
 nav.startpage-navigation {
-  background-color: transparent;
+    background-color: transparent;
 }
-
 
 /*スタートページ内の検索欄を見易く*/
 .sdwrapper .iconmenu-container.SearchField {
-  background-color: var(--colorBgAlphaHeavier);
+    background-color: var(--colorBgAlphaHeavier);
 }
-
 
 /*プライバシー統計*/
 .SpeedDial-Blocked-Counter-Container {
-  background-color: transparent;
+    background-color: transparent;
 }
 .tracker-warning,
 .SpeedDialView-SearchField,
 .SpeedDial-Blocked-Counter {
-  background-color: transparent;
-  backdrop-filter: var(--backgroundBlur);
-  border-radius: var(--radius);
-  --colorBgIntense: none;
+    background-color: transparent;
+    backdrop-filter: var(--backgroundBlur);
+    border-radius: var(--radius);
+    --colorBgIntense: none;
 }
 
 /*スピードダイアル*/
 .startpage .startpage-navigation {
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%), 0 2px 0px 0 rgb(0 0 0 / 10%);
-  backdrop-filter: var(--backgroundBlur);
-  background-color: transparent;
+    box-shadow:
+        0 0 10px 0 rgb(0 0 0 / 10%),
+        0 2px 0px 0 rgb(0 0 0 / 10%);
+    backdrop-filter: var(--backgroundBlur);
+    background-color: transparent;
 }
 .speeddial .dial {
-  background-color: var(--colorAccentFgAlphaHeavy);
-  backdrop-filter: var(--backgroundBlur);
+    background-color: var(--colorAccentFgAlphaHeavy);
+    backdrop-filter: var(--backgroundBlur);
 }
 .startpage .startpage-navigation .startpage-navigation-group:last-of-type {
-  border-left: 0px solid transparent;
+    border-left: 0px solid transparent;
 }
 .startpage .startpage-folder-navigation button {
-  background-color: var(--colorAccentFgAlphaHeavy);
-  backdrop-filter: var(--backgroundBlur);
+    background-color: var(--colorAccentFgAlphaHeavy);
+    backdrop-filter: var(--backgroundBlur);
 }
 
 /*スピードダイヤルのフォルダのコントローラの表示を調整*/
 .button-startpage.up-level svg {
-  left: 20px;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(180deg);
+    left: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
 }
 
 /*ナビゲーター*/
 .button-startpage {
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
 }
 .button-toolbar > button {
-  border-radius: 0px;
+    border-radius: 0px;
 }
 
 /*スピードダイヤルの検索欄*/
 /*検索エンジン*/
 .SearchField nav.menu {
-  background-color: var(--colorBgAlphaHeavy);
-  backdrop-filter: var(--backgroundBlur);
+    background-color: var(--colorBgAlphaHeavy);
+    backdrop-filter: var(--backgroundBlur);
 }
-
-
-
 
 /*VIvaldi環境変数メモ
 --colorBgAlphaBlur：　透明度によって変化する。

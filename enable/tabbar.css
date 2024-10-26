@@ -55,11 +55,10 @@ div#tabs-subcontainer {
 #tabs-subcontainer.right .overflow.tab-strip {
     min-width: 30px;
 }
-/*ワークスペースのアイコンの操作*/
-#browser .workspace-popup .button-icon:not(.override),
-#browser .tabbar-workspace-button .button-icon:not(.override) {
-    margin-right: -2px;
-    margin-left: 4px;
+/*ワークスペース*/
+.button-toolbar.workspace-popup.tabbar-workspace-button {
+    background-color: var(--colorBgAlphaHeavier) !important;
+    color: var(--colorAccentBgDarker) !important;
 }
 .toolbar {
     padding-left: 0px;
@@ -166,4 +165,10 @@ div#tabs-subcontainer {
 .color-behind-tabs-on:not(.transparent-tabbar)#browser.isblurred.dim-blurred
     .tabbar-wrapper {
     --colorTabBar: var(--colorHighlightFgAlpha);
+}
+
+/*ポップアップの動作*/
+.WorkspacePopup-Items .workspace-item-wrapper.selected,
+.WorkspacePopup-Items .this-window.selected {
+    background-color: var(--colorAccentBgAlpha);
 }
