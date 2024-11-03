@@ -38,7 +38,7 @@
     backdrop-filter: var(--backgroundBlur);
 }
 #modal-bg .modal-wrapper {
-    background-color: transparent;
+    background-color: var(--colorBgAlphaBlur);
 }
 .tabswitcher {
     background-color: var(--colorBgAlphaBlur);

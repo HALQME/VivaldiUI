@@ -47,6 +47,7 @@ span.tabbar-wrapper {
 .button-toolbar.newtab {
     left: 0px !important;
 }
+div#tabs-container,
 div#tabs-subcontainer {
     width: 30px;
     flex: 0 0 30px !important;
@@ -75,6 +76,11 @@ div#tabs-subcontainer {
 .tabs-right .button-toolbar.workspace-popup.tabbar-workspace-button {
     max-width: 60px;
 }
+/*別のワークスペースでのサウンド再生を通知するアイコンを消す*/
+.WorkspaceButton > span.button-icon.audio {
+    display: none;
+}
+
 /*タブバーの線を消す*/
 #tabs-tabbar-container {
     box-shadow: none;

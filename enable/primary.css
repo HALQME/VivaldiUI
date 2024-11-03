@@ -26,7 +26,7 @@ input[type="submit"][type="submit"]:active,
 input[type="submit"][type="submit"]:hover,
 span.editable-title-container:hover {
     background-color: var(--colorBgAlphaHeavier) !important;
-    color: var(--colorAccentBgDarker) !important;
+    color: var(--colorFgFaded) !important;
 }
 
 /*その他テキストスタイル*/
